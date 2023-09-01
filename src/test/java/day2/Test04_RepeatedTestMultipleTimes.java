@@ -27,15 +27,15 @@ public class Test04_RepeatedTestMultipleTimes {
     }
 
 
-    //repeates testler daha cok random bir deger ile test edilirken kullanilir
+    //repeated testler daha cok random bir deger ile test edilirken kullanilir
     //11
     Random random=new Random();
-    @RepeatedTest(5)
+    @RepeatedTest(4)
     void testAddExactRandom(){
         int sayi1= random.nextInt(10);
         int sayi2=random.nextInt(10);
         assertEquals(sayi1+sayi2,Math.addExact(sayi1,sayi2));
-        System.out.println("addExact icin random test calisti");
+      System.out.println("addExact icin random test calisti");
         System.out.println("sayi1 = " + sayi1+ "sayi2 = " + sayi2);
 
     }

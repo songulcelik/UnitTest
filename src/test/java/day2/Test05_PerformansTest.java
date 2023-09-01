@@ -16,8 +16,8 @@ public class Test05_PerformansTest {
     @Test
     void  testPrintPerformance(){
         //1-500000 olan sayilari yazdirma
-        assertTimeout(Duration.ofSeconds(3),()->{
-            IntStream.rangeClosed(1,500000).forEach(System.out::println);
+        assertTimeout(Duration.ofMillis(5),()->{
+            IntStream.rangeClosed(1,50000).forEach(System.out::println);
         });
     }
 

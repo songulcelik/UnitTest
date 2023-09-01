@@ -15,8 +15,10 @@ public class Test01_TestingExceptions {
     void testException(){
         String str=null;
         //str.length(); NullPointerException?
-        assertThrows(NullPointerException.class,()->{str.length();});//Executable interfacesi fanksinil interface.
+        assertThrows(NullPointerException.class,()->{
+            str.length();});//Executable interfacesi fanksinil interface.
                                                                                 // icinde bir tane method var sadece. bu nedenle ()-> ile implement et diyoruz
+
     }
 
     //2
@@ -24,11 +26,11 @@ public class Test01_TestingExceptions {
     void testException2(){
         int sayi1=6;
         int sayi2=0;
+        int bolum=sayi1/sayi2;
        // System.out.println(sayi1 / sayi2);//ArithmeticException firlatmali
 
         assertThrows(ArithmeticException.class,()->{
-            System.out.println(sayi1/sayi2);
-        });
+            System.out.println(bolum);});
 
     }
 

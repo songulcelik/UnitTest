@@ -1,5 +1,6 @@
 package day2;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -8,9 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test06_GroupingTest {
 
-    //birbirleriyle iliskili olan testleri gruplayabilriz
-    //14
+    //!birbirleriyle iliskili olan testleri gruplayabilriz
+
     @Nested
+
     class MultiplyTest{
         @ParameterizedTest
         @CsvSource(value = {"-12,-3,4","12,-3,-4"})

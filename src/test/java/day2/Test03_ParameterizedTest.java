@@ -20,9 +20,10 @@ public class Test03_ParameterizedTest {
     }
     //bunun yerine buralar boiler plate oldu. 4 defa assertTrue kullandik. bunun yerine bir kere
     //asserrtTrue kullanarak birden fazla parametreyi kullanarak nasil test ederiz
-    @ParameterizedTest//testim parametre alicaz
+    @ParameterizedTest//testim parametre alicak
     @ValueSource(strings = {"fevzi","    ","Umit","FARUK"})//parametrem buradan gelcek. parametre olarak dizi alir
     void testLength2(String str){
+
         assertTrue(str.length()>0);
     }
 
@@ -40,6 +41,7 @@ public class Test03_ParameterizedTest {
     @ParameterizedTest
     @CsvSource(value = {"Merhaba, MERHABA", "javA, JAVA","tEsT, TEST"})//virgulle ayrilmis degerler kaynagi. ilk deger methodun parametresi, ikinci deger beklenen
     void  testUpperCase2(String str1,String str2){//anlik deger degisken oldugunda beklenen deger de degisken olur bu nedenle method 2 parametre alir
+
         assertEquals(str2,str1.toUpperCase());
     }
 
@@ -47,6 +49,7 @@ public class Test03_ParameterizedTest {
     @ParameterizedTest
     @CsvSource(value = {"true, java,a","false,junit,k"})
     void testContains(boolean b,String str1,String str2){
+
         assertEquals(b,str1.contains(str2));
     }
 

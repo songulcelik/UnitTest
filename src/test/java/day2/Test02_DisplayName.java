@@ -19,7 +19,7 @@ public class Test02_DisplayName {//test_parseInt_check_does_throw_NumberFormatEx
         System.out.println(info.getDisplayName());
 
        assertThrows(NumberFormatException.class,()->{Integer.parseInt(str);},"NumberFormatException firlatilmadi");
-       // assertThrows(NumberFormatException.class,()->{Integer.parseInt(str2);},"NumberFormatException firlatilmadi");
+      //  assertThrows(NumberFormatException.class,()->{Integer.parseInt(str2);},"NumberFormatException firlatilmadi");
     }
 
 
