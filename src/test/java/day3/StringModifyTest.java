@@ -13,4 +13,5 @@ public class StringModifyTest {
         void deleteIfAIsInYwoPositionTest(String expected, String param){
             assertEquals(expected,object.deleteIfAIsInTwoPosition(param));
         }
+
 }
